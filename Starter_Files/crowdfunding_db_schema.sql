@@ -1,4 +1,4 @@
--- DROP TABLE category CASCADE;
+DROP TABLE category CASCADE;
 CREATE TABLE category (
 	category_id VARCHAR(255) NOT NULL,
 	category VARCHAR(255) NOT NULL,	
@@ -8,7 +8,7 @@ CREATE TABLE category (
 SELECT * FROM Category;
 
 
-DROP TABLE subcategory;
+DROP TABLE subcategory CASCADE;
 CREATE TABLE subcategory (
 	subcategory_id VARCHAR(255) NOT NULL,
 	subcategory VARCHAR(255) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE subcategory (
 
 SELECT * FROM Subcategory;
 
-Drop TABLE campaign
+Drop TABLE campaign CASCADE;
 CREATE TABLE campaign (
 	cf_id INT NOT NULL,
 	contact_id INT NOT NULL,
@@ -42,8 +42,7 @@ CREATE TABLE campaign (
 
 SELECT * FROM campaign;
 
-
--- DROP TABLE contacts;
+DROP TABLE contacts CASCADE;
 CREATE TABLE contacts (
 	contact_id INT NOT NULL,
 	first_name VARCHAR(255) NOT NULL,
